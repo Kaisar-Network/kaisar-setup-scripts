@@ -8,17 +8,27 @@ These guidelines will assist you in utilizing the setup script available in this
 ### Prerequisites
 Ensure that curl is installed on your system for script downloading purposes.
 
+#### Ubuntu OS. 
 If not already installed, execute the following command to install curl:
 ```bash
 sudo apt install curl
 ```
+#### Mac OS. 
+```bash
+coming soon
+```
+#### Windows OS. 
+```bash
+coming soon
+```
 ### Installation
+
+#### Ubuntu OS
 Proceed with downloading the setup script using the command below:
 ```bash
 curl -L https://github.com/kaisar-network/kaisar-setup-script_ubuntu.sh -o kaisar-setup.sh
 ```
 Run the script:
-
 ```bash
 chmod +x kaisar-setup.sh && ./kaisar-setup.sh
 ```
