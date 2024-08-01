@@ -34,7 +34,7 @@ chmod +x kaisar-setup.sh && ./kaisar-setup.sh
 ```
 Create a .env file in the root directory of your project and add the following environment variables
 ```
-HTTP_PROVIDER=https://sepolia.infura.io/v3/76aaef955eb14502b2d0ad15ad6d0e44
+HTTP_PROVIDER=https://sepolia.infura.io/v3/0d02fbb6befa4284b5098ccb8c74e726
 CONTRACT_ADDRESS_DEVICE_MANAGER=<<YourDeviceManagerContractAddress>>
 CONTRACT_ADDRESS_ORDER_MANAGER=<<YourOrderManagerContractAddress>>
 CONTRACT_ADDRESS_MAIN=<<YourMainContractAddress>>
