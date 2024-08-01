@@ -28,10 +28,32 @@ Proceed with downloading the setup script using the command below:
 ```bash
 curl -L https://github.com/kaisar-network/kaisar-setup-script_ubuntu.sh -o kaisar-setup.sh
 ```
-Run the script:
+Run the script to install driver, docker and required dependencies:
 ```bash
 chmod +x kaisar-setup.sh && ./kaisar-setup.sh
 ```
+Create a .env file in the root directory of your project and add the following environment variables
+```
+HTTP_PROVIDER=https://sepolia.infura.io/v3/76aaef955eb14502b2d0ad15ad6d0e44
+CONTRACT_ADDRESS_DEVICE_MANAGER=<<YourDeviceManagerContractAddress>>
+CONTRACT_ADDRESS_ORDER_MANAGER=<<YourOrderManagerContractAddress>>
+CONTRACT_ADDRESS_MAIN=<<YourMainContractAddress>>
+WALLET_MAIN_ADDRESS=<<YourMainWalletAddress>>
+SOCKET_URL=https://example.com
+SOCKET_PATH=/csm/socket.io
+JWT_TOKEN=<<Your Node Registration Token>>
+```
+
+Run follow script to start worker controller
+```
+docker run --env-file .env -d --name kaisar-worker  kaisarnetwork/worker-controller:latest
+```
+
+Check worker controller log
+```
+docker logs kaisar-worker
+```
+
 ## Summary
 The setup script executes a sequence of tasks:
 
